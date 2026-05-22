@@ -6,6 +6,12 @@ export const homePage = defineType({
   type: 'document',
   fields: [
     defineField({
+      name: 'pageTitle',
+      title: 'Page Title',
+      type: 'string',
+      description: 'The title that appears in the browser tab and search engine results.',
+    }),
+    defineField({
       name: 'heroBlock',
       title: 'Hero',
       type: 'object',
@@ -46,7 +52,7 @@ export const homePage = defineType({
             defineField({
               name: 'url',
               title: 'URL',
-              type: 'url',
+              type: 'customUrl',
             }),
           ],
         }),
@@ -63,7 +69,7 @@ export const homePage = defineType({
             defineField({
               name: 'url',
               title: 'URL',
-              type: 'url',
+              type: 'customUrl',
             }),
           ],
         }),
@@ -90,7 +96,7 @@ export const homePage = defineType({
             defineField({
               name: 'url',
               title: 'URL',
-              type: 'url',
+              type: 'customUrl',
             }),
             defineField({
               name: 'altText',
@@ -147,7 +153,7 @@ export const homePage = defineType({
                 defineField({
                   name: 'url',
                   title: 'URL',
-                  type: 'url',
+                  type: 'customUrl',
                 }),
               ],
             }),
@@ -220,7 +226,7 @@ export const homePage = defineType({
                 defineField({
                   name: 'url',
                   title: 'URL',
-                  type: 'url',
+                  type: 'customUrl',
                 }),
               ],
             }),
