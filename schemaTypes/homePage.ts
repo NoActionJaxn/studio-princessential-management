@@ -75,29 +75,163 @@ export const homePage = defineType({
       type: 'array',
       of: [
         defineField({
-          name: 'image',
-          title: 'Image',
-          type: 'image',
-          options: {
-            hotspot: true,
-          },
-        }),
-        defineField({
-          name: 'url',
-          title: 'URL',
-          type: 'url',
-        }),
-        defineField({
-          name: 'altText',
-          title: 'Alt Text',
-          type: 'string',
+          name: 'sponsor',
+          title: 'Sponsor',
+          type: 'object',
+          fields: [
+            defineField({
+              name: 'image',
+              title: 'Image',
+              type: 'image',
+              options: {
+                hotspot: true,
+              },
+            }),
+            defineField({
+              name: 'url',
+              title: 'URL',
+              type: 'url',
+            }),
+            defineField({
+              name: 'altText',
+              title: 'Alt Text',
+              type: 'string',
+            }),
+          ],
         }),
       ],
     }),
     defineField({
-      name: "seo",
-      title: "SEO",
-      type: "seo",
+      name: 'contentBlocks',
+      title: 'Content Blocks',
+      type: 'array',
+      of: [
+        defineField({
+          name: 'contentBlock',
+          title: 'Content Block',
+          type: 'object',
+          fields: [
+            defineField({
+              name: 'title',
+              title: 'Title',
+              type: 'string',
+            }),
+            defineField({
+              name: 'subtitle',
+              title: 'Subtitle',
+              type: 'string',
+            }),
+            defineField({
+              name: 'content',
+              title: 'Content',
+              type: 'text',
+            }),
+            defineField({
+              name: 'color',
+              title: 'Color',
+              type: 'color',
+              options: {
+                disableAlpha: true
+              }
+            }),
+            defineField({
+              name: 'callToAction',
+              title: 'Call to Action',
+              type: 'object',
+              fields: [
+                defineField({
+                  name: 'text',
+                  title: 'Text',
+                  type: 'string',
+                }),
+                defineField({
+                  name: 'url',
+                  title: 'URL',
+                  type: 'url',
+                }),
+              ],
+            }),
+          ]
+        }),
+      ],
+    }),
+    defineField({
+      name: 'carouselBlock',
+      title: 'Carousel Block',
+      type: 'object',
+      fields: [
+        defineField({
+          name: 'title',
+          title: 'Title',
+          type: 'string',
+        }),
+        defineField({
+          name: 'images',
+          title: 'Images',
+          type: 'array',
+          of: [
+            defineField({
+              name: 'imageBlock',
+              title: 'Image',
+              type: 'object',
+              fields: [
+                defineField({
+                  name: 'image',
+                  title: 'Image',
+                  type: 'image',
+                  options: {
+                    hotspot: true,
+                  },
+                }),
+                defineField({
+                  name: 'altText',
+                  title: 'Alt Text',
+                  type: 'string',
+                }),
+              ],
+            }),
+          ],
+        }),
+        defineField({
+          name: 'footNoteBlock',
+          title: 'Foot Note Block',
+          type: 'object',
+          fields: [
+            defineField({
+              name: 'title',
+              title: 'Title',
+              type: 'string',
+            }),
+            defineField({
+              name: 'content',
+              title: 'Content',
+              type: 'text',
+            }),
+            defineField({
+              name: 'callToAction',
+              title: 'Call to Action',
+              type: 'object',
+              fields: [
+                defineField({
+                  name: 'text',
+                  title: 'Text',
+                  type: 'string',
+                }),
+                defineField({
+                  name: 'url',
+                  title: 'URL',
+                  type: 'url',
+                }),
+              ],
+            }),
+          ],
+        }),
+        defineField({
+          name: "seo",
+          title: "SEO",
+          type: "seo",
+        }),
+      ],
     }),
   ],
 });

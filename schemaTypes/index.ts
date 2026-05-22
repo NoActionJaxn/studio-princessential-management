@@ -3,6 +3,7 @@ import { contactPage } from "./contactPage";
 import { homePage } from "./homePage";
 import { seoType } from "./seoType";
 import { talentPage } from "./talentPage";
+import { talentType } from "./talentType";
 
 export const schemaTypes = [
   aboutPage,
@@ -10,4 +11,5 @@ export const schemaTypes = [
   homePage,
   seoType,
   talentPage,
+  talentType,
 ];
