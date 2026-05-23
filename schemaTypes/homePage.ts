@@ -73,6 +73,12 @@ export const homePage = defineType({
             }),
           ],
         }),
+        defineField({
+          name: "dark",
+          title: "Dark",
+          type: "boolean",
+          description: "Toggle dark mode for the hero section.",
+        }),
       ]
     }),
     defineField({
@@ -157,6 +163,12 @@ export const homePage = defineType({
                 }),
               ],
             }),
+            defineField({
+              name: "dark",
+              title: "Dark",
+              type: "boolean",
+              description: "Toggle dark mode for the hero section.",
+            }),
           ]
         }),
       ],
@@ -198,46 +210,46 @@ export const homePage = defineType({
             }),
           ],
         }),
+      ],
+    }),
+    defineField({
+      name: 'footNoteBlock',
+      title: 'Foot Note Block',
+      type: 'object',
+      fields: [
         defineField({
-          name: 'footNoteBlock',
-          title: 'Foot Note Block',
+          name: 'title',
+          title: 'Title',
+          type: 'string',
+        }),
+        defineField({
+          name: 'content',
+          title: 'Content',
+          type: 'text',
+        }),
+        defineField({
+          name: 'callToAction',
+          title: 'Call to Action',
           type: 'object',
           fields: [
             defineField({
-              name: 'title',
-              title: 'Title',
+              name: 'text',
+              title: 'Text',
               type: 'string',
             }),
             defineField({
-              name: 'content',
-              title: 'Content',
-              type: 'text',
-            }),
-            defineField({
-              name: 'callToAction',
-              title: 'Call to Action',
-              type: 'object',
-              fields: [
-                defineField({
-                  name: 'text',
-                  title: 'Text',
-                  type: 'string',
-                }),
-                defineField({
-                  name: 'url',
-                  title: 'URL',
-                  type: 'customUrl',
-                }),
-              ],
+              name: 'url',
+              title: 'URL',
+              type: 'customUrl',
             }),
           ],
         }),
-        defineField({
-          name: "seo",
-          title: "SEO",
-          type: "seo",
-        }),
       ],
+    }),
+    defineField({
+      name: "seo",
+      title: "SEO",
+      type: "seo",
     }),
   ],
 });
