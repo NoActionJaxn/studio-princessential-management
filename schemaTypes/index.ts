@@ -1,4 +1,5 @@
 import { aboutPage } from "./aboutPage";
+import { businessInquiryType } from "./businessInquiryType";
 import { contactPage } from "./contactPage";
 import { customUrl } from "./customUrl";
 import { homePage } from "./homePage";
@@ -16,4 +17,5 @@ export const schemaTypes = [
   talentPage,
   talentType,
   socialsType,
+  businessInquiryType,
 ];

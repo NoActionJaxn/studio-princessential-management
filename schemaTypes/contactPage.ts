@@ -23,6 +23,12 @@ export const contactPage = defineType({
       of: [{ type: "block" }],
     }),
     defineField({
+      name: "targetEmail",
+      title: "Target Email",
+      type: "email",
+      description: "The email all business inquiries will be forwarded to."
+    }),
+    defineField({
       name: "seo",
       title: "SEO",
       type: "seo",
