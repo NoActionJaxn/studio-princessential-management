@@ -26,7 +26,7 @@ export const socialsType = defineType({
       type: 'string',
       options: {
         list: [
-          { title: 'Brand', value: 'fa-brand' },
+          { title: 'Brand', value: 'fa-brands' },
           { title: 'Solid', value: 'fa-solid' },
           { title: 'Regular', value: 'fa-regular' },
           { title: 'Light', value: 'fa-light' },
