@@ -203,8 +203,9 @@ export const handler = documentEventHandler<PostData>(async ({ event, context })
   })
 
   if (!response.ok) {
-    throw new Error(`MailerSend API error: ${response.status} ${response.statusText}`)
-  }
+  const errorBody = await response.text()
+  throw new Error(`MailerSend API error: ${response.status} ${response.statusText} — ${errorBody}`)
+}
 
   console.log('Email sent successfully via MailerSend')
 });
