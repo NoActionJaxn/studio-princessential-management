@@ -76,6 +76,11 @@ export const homePage = defineType({
       ]
     }),
     defineField({
+      name: 'sponsorsTitle',
+      title: 'Sponsors Title',
+      type: 'string',
+    }),
+    defineField({
       name: 'sponsorsBlock',
       title: 'Sponsors',
       type: 'array',
